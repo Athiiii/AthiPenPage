@@ -5,6 +5,7 @@
 .orangeOnHover {
   color: #333366 !important;
   transition: all 0.3s !important;
+  padding-bottom: 2px !important;
 }
 
 .orangeOnHover:hover {
@@ -22,7 +23,12 @@
   border-bottom: 0rem solid white !important;
 }
 
-.textUnderline > span {
+.textUnderline {
+  color: #ff9933 !important;
+}
+
+.textUnderline {
+  border-radius: 0 !important;
   border-bottom: 0.1rem solid #de7c1a !important;
   margin-bottom: 0rem !important;
 }
@@ -38,4 +44,12 @@
 
 .nav-btn > span {
   margin-bottom: 0.1rem !important;
+}
+
+.link-noStyle {
+  text-decoration: none;
+}
+
+.link-noStyle:hover {
+  text-decoration: none;
 }
