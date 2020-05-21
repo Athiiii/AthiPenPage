@@ -1,0 +1,41 @@
+.marginLeftAuto {
+  margin-left: auto;
+}
+
+.orangeOnHover {
+  color: #333366 !important;
+  transition: all 0.3s !important;
+}
+
+.orangeOnHover:hover {
+  color: #ff9933 !important;
+  background-color: transparent !important;
+}
+
+.orangeOnHover:focus {
+  outline: none;
+  color: #de7c1a !important;
+}
+
+.orangeOnHover > span {
+  transition: all 0.3s;
+  border-bottom: 0rem solid white !important;
+}
+
+.textUnderline > span {
+  border-bottom: 0.1rem solid #de7c1a !important;
+  margin-bottom: 0rem !important;
+}
+
+.padding-x-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.nav-btn > span {
+  margin-bottom: 0.1rem !important;
+}
