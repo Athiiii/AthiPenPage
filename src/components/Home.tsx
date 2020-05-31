@@ -5,6 +5,7 @@ import { AthiPen } from "./AthiPen";
 import { Contact } from "./Contact";
 import { AllProducts } from "./AllProducts";
 import { OurStory } from "./OurStory";
+import "../style/main.scss";
 
 export class Home extends Component {
   static displayName = Home.name;

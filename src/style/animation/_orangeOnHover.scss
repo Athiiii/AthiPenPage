@@ -1,0 +1,20 @@
+.orangeOnHover {
+    color: #333366 !important;
+    transition: all 0.3s !important;
+    padding-bottom: 2px !important;
+
+    &:hover {
+        color: #ff9933 !important;
+        background-color: transparent !important;
+    }
+
+    &:focus {
+        outline: none;
+        color: #de7c1a !important;
+    }
+
+    & > span {
+        transition: all 0.3s;
+        border-bottom: 0rem solid white !important;
+    }
+}

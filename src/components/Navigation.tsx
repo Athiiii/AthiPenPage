@@ -4,36 +4,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AppBar, Button, ListItemText, Menu, MenuItem, Toolbar, Typography, withStyles } from "@material-ui/core";
 import React, { Component } from "react";
 import { Color } from "../Enum/Color";
-import "../style/style.css";
+import "../style/main.scss";
 
 fontawesome.library.add(faShoppingCart);
 
 interface INavigationState {
   selectedItem: string
-  anchorEl: any
-  setAnchorEl: any
 }
 
 export class Navigation extends Component<{}, INavigationState> {
 
   public constructor(props, state: any) {
     super(props);
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
     this.state = {
-      selectedItem: "",
-      anchorEl: anchorEl,
-      setAnchorEl: setAnchorEl
+      selectedItem: ""
     }
   }
 
-  public handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    this.state.setAnchorEl(event.currentTarget);
-  };
-
-  public handleClose = () => {
-    this.state.setAnchorEl(null);
-  };
 
   public athiPenClick = () => this.setState({ selectedItem: "athiPen" });
   public allProduktClick = () => this.setState({ selectedItem: "allProdukt" });
@@ -44,8 +32,8 @@ export class Navigation extends Component<{}, INavigationState> {
 
     return (
       <AppBar position="static" className="bg-white">
-        <Toolbar className="marginLeftAuto">
-          <Typography variant="h6" className="padding-x-10">
+        <Toolbar className="ml-auto">
+          <Typography variant="h6" className="px-2">
             <a href="/" className="link-noStyle">
               <Button
                 className={`orangeOnHover ${window.location.pathname === "/" ? "textUnderline" : "nav-btn"}`}
@@ -60,7 +48,7 @@ export class Navigation extends Component<{}, INavigationState> {
           <Typography variant="h6" className="padding-x-10">
             <a href="/AllProducts" className="link-noStyle">
               <Button
-                className={`orangeOnHover ${window.location.pathname === "/AllProducts" ? "textUnderline" : "nav-btn"}`}
+                className={`orangeOnHover ${window.location.pathname.toLowerCase() === "/allproducts" ? "textUnderline" : "nav-btn"}`}
                 disableRipple={true}
                 focusRipple={false}
                 onClick={this.allProduktClick}
@@ -70,21 +58,18 @@ export class Navigation extends Component<{}, INavigationState> {
             </a>
           </Typography>
           <Typography variant="h6" className="padding-x-10">
-            <Button
-              className={`orangeOnHover ${selectedItem === "others" ? "textUnderline" : "nav-btn"}`}
-              disableRipple={true}
-              focusRipple={false}
-              onClick={this.othersClick}
-            >
-              Others
+            <a href="/Others" className="link-noStyle">
+              <Button
+                className={`orangeOnHover ${window.location.pathname.toLowerCase() === "/others" ? "textUnderline" : "nav-btn"}`}
+                disableRipple={true}
+                focusRipple={false}
+                onClick={this.othersClick}
+              >
+                Others
             </Button>
+            </a>
           </Typography>
-          <FontAwesomeIcon
-            size="lg"
-            icon={"shopping-cart"}
-            color={Color.Dark}
-            className="orangeOnHover"
-          />
+          <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="orangeOnHover" />
         </Toolbar>
       </AppBar>
     );

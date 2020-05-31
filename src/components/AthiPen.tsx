@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-import { Navigation } from "./Navigation";
+import "../style/main.scss";
 
 export class AthiPen extends Component {
     static displayName = AthiPen.name;

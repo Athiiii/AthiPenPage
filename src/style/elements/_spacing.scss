@@ -1,0 +1,95 @@
+// margin & padding spacing
+$spacings: (
+  "auto": auto,
+  "0": 0,
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 1rem,
+  "4": 1.5rem,
+  "5": 2rem,
+  "6": 2.5rem,
+  "7": 3rem,
+  "8": 3.5rem,
+  "9": 4rem,
+  "10": 4.5rem,
+  "11": 5rem,
+  "12": 5
+);
+
+@each $key, $spacing in $spacings {
+  /*
+  * PADDING SECTION
+  */
+  // padding all around
+  #{$prefix-padding}a-#{$key} {
+    padding: $spacing !important;
+  }
+
+  // padding x axis
+  #{$prefix-padding}x-#{$key} {
+    padding-top: $spacing !important;
+    padding-right: $spacing !important;
+  }
+
+  // padding y axis
+  #{$prefix-padding}y-#{$key} {
+    padding-right: $spacing !important;
+    padding-left: $spacing !important;
+  }
+
+  // padding top
+  #{$prefix-padding}t-#{$key} {
+    padding-top: $spacing !important;
+  }
+
+  // padding bottom
+  #{$prefix-padding}b-#{$key} {
+    padding-bottom: $spacing !important;
+  }
+  // padding right
+  #{$prefix-padding}r-#{$key} {
+    padding-right: $spacing !important;
+  }
+  // padding left
+  #{$prefix-padding}l-#{$key} {
+    padding-left: $spacing !important;
+  }
+
+  /*
+  * MARGIN SECTION
+  */
+  // margin all around
+  #{$prefix-margin}a-#{$key} {
+    margin: $spacing !important;
+  }
+
+  // margin x axis
+  #{$prefix-margin}x-#{$key} {
+    margin-top: $spacing !important;
+    margin-right: $spacing !important;
+  }
+
+  // margin y axis
+  #{$prefix-margin}y-#{$key} {
+    margin-right: $spacing !important;
+    margin-left: $spacing !important;
+  }
+
+  // margin top
+  #{$prefix-margin}t-#{$key} {
+    margin-top: $spacing !important;
+  }
+
+  // margin bottom
+  #{$prefix-margin}b-#{$key} {
+    margin-bottom: $spacing !important;
+  }
+  // margin right
+  #{$prefix-margin}r-#{$key} {
+    margin-right: $spacing !important;
+  }
+  // margin left
+  #{$prefix-margin}l-#{$key} {
+    margin-left: $spacing !important;
+  }
+}
