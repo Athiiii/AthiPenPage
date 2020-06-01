@@ -1,12 +1,36 @@
 .navigation {
   background-color: white !important;
 
+  &__menu_item {
+    font-family: "Lato" !important;
+    transition: all .3s !important;
+    color: $color-dark;
+
+    &_selected>a {
+      color: $color-orange !important;
+    }
+
+    &:hover {
+      color: $color-orange;
+    }
+
+    &>a {
+      text-decoration: none;
+      transition: color .2s;
+      color: $color-dark;
+
+      &:hover {
+        color: $color-orange;
+      }
+    }
+  }
+
   &__toolbar {
     color: $color-dark;
   }
 
   &_icon {
-    transition: color .2s;
+    transition: color 0.2s;
 
     &:hover {
       color: $color-orange;
@@ -25,11 +49,12 @@
     @media screen and (max-width: 768px) {
       width: 100%;
     }
-    
-    &_href, &_href > span {
+
+    &_href,
+    &_href > span {
       position: relative;
       color: inherit;
-      transition: color .3s;
+      transition: color 0.3s;
       text-decoration: none !important;
       line-height: 24px;
       width: 100px;
@@ -39,7 +64,7 @@
         position: absolute;
         transition: transform 0.5s ease;
       }
-      
+
       &:hover {
         color: $color-orange !important;
         text-decoration: none !important;

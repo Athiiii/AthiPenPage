@@ -15,7 +15,7 @@ export class Home extends Component {
       <div>
         <Navigation />
         <Switch>
-          <Route exact path="/contact">
+          <Route exact path="/Contact">
             <Contact />
           </Route>
           <Route exact path="/AllProducts">
