@@ -83,7 +83,7 @@ export class Navigation extends Component<{}, INavigationState> {
             </Menu>
 
           </h6>
-          <h6 className="ml-1">
+          <h6 className="ml-5">
             <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="navigation_icon" />
           </h6>
         </Toolbar>
