@@ -3,10 +3,11 @@
 
   &__menu_item {
     font-family: "Lato" !important;
-    transition: all .3s !important;
+    transition: all 0.3s !important;
     color: $color-dark;
+    font-size: 1rem;
 
-    &_selected>a {
+    &_selected > a {
       color: $color-orange !important;
     }
 
@@ -14,9 +15,9 @@
       color: $color-orange;
     }
 
-    &>a {
+    & > a {
       text-decoration: none;
-      transition: color .2s;
+      transition: color 0.2s;
       color: $color-dark;
 
       &:hover {
@@ -31,24 +32,29 @@
 
   &_icon {
     transition: color 0.2s;
+    margin-right: 20px;
+    margin-left: 10px;
 
     &:hover {
       color: $color-orange;
     }
   }
 
+  @media only screen and (max-width: 600px) {
+    &_icon {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
   &__link {
-    margin: 0 10px !important;
+    margin: 0 5px !important;
     float: left;
-    width: 50%;
     height: 44px;
     margin: 30px 0;
     line-height: 24px;
     text-align: center;
     font-weight: normal;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
 
     &_href,
     &_href > span {
@@ -57,7 +63,7 @@
       transition: color 0.3s;
       text-decoration: none !important;
       line-height: 24px;
-      width: 100px;
+
       &:before,
       &:after {
         content: "";
@@ -68,6 +74,16 @@
       &:hover {
         color: $color-orange !important;
         text-decoration: none !important;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    &__link {
+      margin: 0 10px !important;
+
+      &_href > span {
+        padding: 10px 15px !important;
       }
     }
   }

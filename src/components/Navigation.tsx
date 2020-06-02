@@ -1,7 +1,7 @@
 import fontawesome from "@fortawesome/fontawesome";
 import { faShoppingCart } from "@fortawesome/fontawesome-free-solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { AppBar, Menu, MenuItem, Toolbar } from "@material-ui/core";
+import { AppBar, Menu, MenuItem, Toolbar, Typography } from "@material-ui/core";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Color } from "../Enum/Color";
@@ -43,7 +43,7 @@ export class Navigation extends Component<{}, INavigationState> {
 
     return (
       <AppBar position="static" className="navigation">
-        <Toolbar className="ml-auto navigation__toolbar">
+        <Toolbar className="ml-auto navigation__toolbar pt-1 pr-1 pl-2">
           <Link to="/" onClick={this.setAthiPenPage}>
             <h6 className="navigation__link">
               <div
@@ -81,11 +81,10 @@ export class Navigation extends Component<{}, INavigationState> {
               <MenuItem onClick={this.setOurStoryPage} className={`navigation__menu_item navigation__menu_item_${selectedPage === 'OurStory' ? 'selected' : ''}`} ><Link to="/OurStory">Our Story</Link></MenuItem>
               <MenuItem onClick={this.setContactsPage} className={`navigation__menu_item navigation__menu_item_${selectedPage === 'ContactUs' ? 'selected' : ''}`}><Link to="/Contact">Contact us</Link></MenuItem>
             </Menu>
-
           </h6>
-          <h6 className="ml-5">
-            <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="navigation_icon" />
-          </h6>
+          <Typography variant="h6">
+            <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="navigation_icon mb-1" />
+          </Typography>
         </Toolbar>
       </AppBar >
     );
