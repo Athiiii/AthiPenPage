@@ -12,6 +12,33 @@
 
         &_second {
             color: $color-dark;
+            margin-bottom: 2rem;
+        }
+
+        &_text {
+            color: #cecece;
+            font-size: 15px;
+        }
+
+        &_help {
+            margin-top: 1.5rem;
+            color: #cecece;
+            font-size: 15px;
+        }
+
+        &_phone {
+            color: $color-dark;
+        }
+
+        &_mail {
+            color: $color-dark;
+            text-decoration: none;
+            transition: color .2s;
+
+            &:hover {
+                text-decoration: none;
+                color: $color-orange;
+            }
         }
     }
 }
