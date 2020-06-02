@@ -10,7 +10,10 @@ export class Contact extends Component {
             <div>
                 <Grid container spacing={3} className="pa-3">
                     <Grid item xs={6}>
-                        asdfasdf
+                        <span className="contact_header">
+                            <h3 className="contact_header_first">Don't be a stranger</h3>
+                            <h3 className="contact_header_second">just say hello</h3>
+                        </span>
                     </Grid>
                     <Grid item xs={6}>
                         asdfasdf

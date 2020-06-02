@@ -1,0 +1,17 @@
+.contact {
+    &_header {
+        font-family: 'Lato';
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &_first {
+            color: $color-orange;
+            margin-bottom: 0;
+        }
+
+        &_second {
+            color: $color-dark;
+        }
+    }
+}
