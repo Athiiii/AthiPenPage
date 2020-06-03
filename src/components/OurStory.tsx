@@ -4,7 +4,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import "../style/main.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Color } from "../Enum/Color";
-import { faPen, faMoneyBill, faMedal, faBuilding, faCrop, faTag, faUsers, faFlag, faPenAlt, faTrophy } from "@fortawesome/free-solid-svg-icons";
+import { faPen, faMoneyBill, faMedal, faBuilding, faCrop, faTag, faUsers, faFlag, faPenAlt, faTrophy, faViruses } from "@fortawesome/free-solid-svg-icons";
 
 export class OurStory extends Component {
     static displayName = OurStory.name;
@@ -92,7 +92,7 @@ export class OurStory extends Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--education"
-                        date="July 2019"
+                        date="October 2019"
                         contentArrowStyle={{ borderRight: '7px solid  #963dda' }}
                         contentStyle={{ background: '#963dda', color: '#fff' }}
                         iconStyle={{ background: '#963dda', color: '#fff' }}
@@ -104,7 +104,7 @@ export class OurStory extends Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--education"
-                        date="July 2019"
+                        date="January 2020"
                         contentArrowStyle={{ borderRight: '7px solid  #59d23b' }}
                         contentStyle={{ background: '#59d23b', color: '#fff' }}
                         iconStyle={{ background: '#59d23b', color: '#fff' }}
@@ -113,6 +113,18 @@ export class OurStory extends Component {
                         <h3 className="vertical-timeline-element-title">Leading pen-seller</h3>
                         <h4 className="vertical-timeline-element-subtitle">worldwide</h4>
                         <p>Through AthiPen 2.0 we are able to dominate the pen market and overtake SevisStift Inc., Umat-StiftProdukt Gmbh and Schaad-Stabilo AG</p>
+                    </VerticalTimelineElement>
+                    <VerticalTimelineElement
+                        className="vertical-timeline-element--education"
+                        date="April 2020"
+                        contentArrowStyle={{ borderRight: '7px solid  #ffb819' }}
+                        contentStyle={{ background: '#ffb819', color: '#fff' }}
+                        iconStyle={{ background: '#ffb819', color: '#fff' }}
+                        icon={<FontAwesomeIcon size="lg" icon={faViruses} color={Color.Dark} />}
+                    >
+                        <h3 className="vertical-timeline-element-title">The fight against</h3>
+                        <h4 className="vertical-timeline-element-subtitle">Coronavirus</h4>
+                        <p>The Covid-19 pandemie also affects us. But through our quick switch to Home office and the turn off of our fabrics, we were able to protect our employees. We are armed against the virus.</p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
             </div>
