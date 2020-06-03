@@ -1,6 +1,113 @@
 .contact {
+    width: 60% !important;
+    justify-content: center;
+    margin: 0 auto !important;
+    margin-top: 50px !important;
+
+    &_input {
+        &_form {
+            & > label {
+                transition: color 0.2s;
+                color: $color-dark;
+            }
+
+            &:hover > label {
+                color: $color-orange;
+            }
+
+            & > div > div > svg {
+                transition: color 0.2s;
+            }
+
+            & > div::before {
+                transition: border-bottom-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-bottom-width 0.2s;
+            }
+
+            & > div::after {
+                border-bottom-color: $color-orange !important;
+            }
+
+            &:hover > div > div > svg {
+                color: $color-orange !important;
+            }
+
+            &:hover > div::before {
+                border-bottom: 2px solid rgba($color-orange, 0.5) !important;
+            }
+        }
+    }
+
+    &_sendButton {
+        color: $color-dark;
+        transition: color 0.3s, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+        font-weight: 700 !important;
+
+        & > span.MuiButton-label > span.MuiButton-endIcon.MuiButton-iconSizeMedium > svg {
+            transition: color 0.3s;
+        }
+
+        &:hover {
+            color: $color-orange;
+            background-color: transparent !important;
+
+            & > span.MuiButton-label > span.MuiButton-endIcon.MuiButton-iconSizeMedium > svg {
+                color: $color-orange;
+            }
+        }
+
+        &:focus {
+            outline: inherit !important;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        & {
+            width: 70% !important;
+            margin-top: 40px !important;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        & {
+            width: 80% !important;
+            margin-top: 30px !important;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        & {
+            width: 90% !important;
+            margin-top: 20px !important;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        & {
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            margin-top: 10px !important;
+
+            & > * {
+                max-width: 100% !important;
+            }
+        }
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        justify-content: center;
+
+        & > * {
+            margin-bottom: 1rem !important;
+        }
+    }
+
     &_header {
-        font-family: 'Lato';
+        font-family: "Lato";
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -33,7 +140,7 @@
         &_mail {
             color: $color-dark;
             text-decoration: none;
-            transition: color .2s;
+            transition: color 0.2s;
 
             &:hover {
                 text-decoration: none;

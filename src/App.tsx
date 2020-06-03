@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import { Router } from 'react-router';
+import { Route, RouteComponentProps } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 import { Home } from './components/Home';
-import { createBrowserHistory } from "history";
-import './custom.css'
+import './custom.css';
 
 export default class App extends Component {
   static displayName = App.name;
 
   render() {
     return (
-      <Router history={createBrowserHistory()}>
-        <Home />
-      </Router>
+      <BrowserRouter>
+        <Route render={
+          (location: RouteComponentProps<any>): React.ReactNode => {
+            return <Home location={location.location}/>
+          }
+        } />
+      </BrowserRouter>
     );
   }
 }

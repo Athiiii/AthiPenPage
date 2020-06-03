@@ -62,7 +62,7 @@ export class Navigation extends Component<{}, INavigationState> {
           </Link>
           <h6 className="navigation__link" aria-controls="others-menu" aria-haspopup="true">
             <div
-              className={`pointer navigation__link_href navLinkAnimation navLinkAnimation${othersClick || selectedPage == 'ContactUs' || selectedPage == 'OurStory'
+              className={`pointer navigation__link_href navLinkAnimation navLinkAnimation${othersClick || selectedPage === 'ContactUs' || selectedPage === 'OurStory'
                 ? '_focused' : ''}`}
               aria-controls="simple-menu"
               aria-haspopup="true"
@@ -83,7 +83,7 @@ export class Navigation extends Component<{}, INavigationState> {
             </Menu>
           </h6>
           <Typography variant="h6">
-            <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="navigation_icon mb-1" />
+          <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="navigation_icon mb-1" />
           </Typography>
         </Toolbar>
       </AppBar >
