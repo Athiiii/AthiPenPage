@@ -18,9 +18,9 @@ export class Contact extends Component {
 
                             <span className="contact_header_text">Feel free to get in touch with us. We are always optn to discuss new projects, creative ideas or opportunities to be part of your visions.</span>
                             <span className="contact_header_help">Need help?</span>
-                            <a href="mailto:contact_us@athipen.com" className="contact_header_mail">contact_us@athipen.com</a>
+                            <a href="mailto:contact_us@athipen.com" className="contact_header_mail_phone">contact_us@athipen.com</a>
                             <span className="contact_header_help">Feel like to rather talk?</span>
-                            <p className="contact_header_phone">+41 79 123 456 78</p>
+                            <a href="tel:+41 79 123 456 78" className="contact_header_mail_phone">+41 79 123 456 78</a>
 
                         </span>
                     </Grid>

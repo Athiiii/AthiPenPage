@@ -18,8 +18,6 @@ export class Home extends Component<IHomeProps> {
 
   public render(): React.ReactNode {
     const { location } = this.props;
-    console.log(location);
-    
     const currentKey = location.pathname.split('/')[1] || '/'
     const timeout = { enter: 300, exit: 200 }
 

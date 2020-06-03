@@ -1,0 +1,10 @@
+.timeline {
+    &::before {
+        background-color: #f5f5f5 !important;
+        margin-top: 33px;
+    }
+}
+
+.vertical-timeline-element-date {
+    color: $color-dark !important;
+}
