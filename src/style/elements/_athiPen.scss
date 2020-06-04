@@ -1,0 +1,119 @@
+.athiPen {
+    padding: 1rem;
+    width: 60% !important;
+    margin: 0 auto;
+    margin-top: 40px;
+
+    @media only screen and (max-width: 1200px) {
+        & {
+            width: 70% !important;
+            margin-top: 40px !important;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        & {
+            width: 80% !important;
+            margin-top: 30px !important;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        & {
+            width: 90% !important;
+            margin-top: 20px !important;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        & {
+            width: 100% !important;
+            margin-top: 10px !important;
+        }
+    }
+
+    &_header {
+        & > h3 {
+            color: $color-orange;
+        }
+
+        & > h4 {
+            color: $color-dark;
+        }
+
+        &_button {
+            outline: none !important;
+            background-color: $color-orange !important;
+            margin-top: 1rem !important;
+        }
+
+        &_colors {
+            display: flex;
+            flex-direction: row;
+            margin-top: 1rem;
+
+            &_item {
+                margin-right: 10px;
+                height: 1.7rem;
+                width: 1.7rem;
+                border-radius: 100px;
+                padding: 3px;
+                transition: transform 0.3s;
+                position: relative;
+                cursor: pointer;
+                transform: scale(1);
+
+                &-first {
+                    & > span > div {
+                        box-shadow: #00bcd4 0px 0px 0px 14px inset;
+                    }
+
+                    &.selected {
+                        & > span > div {
+                            box-shadow: #00bcd4 0px 0px 0px 3px inset;
+                        }
+                    }
+                }
+
+                &-second {
+                    & > span > div {
+                        box-shadow: #ff5722 0px 0px 0px 14px inset;
+                    }
+
+                    &.selected {
+                        & > span > div {
+                            box-shadow: #ff5722 0px 0px 0px 3px inset;
+                        }
+                    }
+                }
+
+                & > span > div {
+                    background: white;
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                    outline: none;
+                    border-radius: 50%;
+                    transition: box-shadow 100ms ease 0s;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        &_learn-more {
+            color: $color-dark !important;
+            text-decoration: none !important;
+            transition: color 0.2s !important;
+            display: block !important;
+            margin-top: 0.5rem !important;
+
+            &:hover {
+                text-decoration: none !important;
+                color: $color-orange !important;
+            }
+        }
+    }
+}

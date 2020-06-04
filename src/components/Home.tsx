@@ -7,6 +7,7 @@ import { AthiPen } from "./AthiPen";
 import { Contact } from "./Contact";
 import { Navigation } from "./Navigation";
 import { OurStory } from "./OurStory";
+import { Redirect } from "react-router";
 
 interface IHomeProps {
   location: any;
@@ -38,6 +39,9 @@ export class Home extends Component<IHomeProps> {
                 </Route>
                 <Route exact path="/">
                   <AthiPen />
+                </Route>
+                <Route exact path="*">
+                  <Redirect to="/" />
                 </Route>
               </Switch>
             </section>

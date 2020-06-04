@@ -40,7 +40,7 @@ export class Contact extends Component<{}, IContactState> {
         var name = true;
 
         message = messageValue !== null && messageValue !== "";
-        email = emailValue !== null && emailValue !== "";
+        email = emailValue !== null && emailValue !== "" && this.validateEmail(emailValue);
         name = nameValue !== null && nameValue !== "";
 
         if (email && message && name) {
@@ -50,6 +50,13 @@ export class Contact extends Component<{}, IContactState> {
         }
 
     }
+
+    public validateEmail = (email: string): boolean => 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    
 
     public nameChange = (nameValueEvent: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => this.setState({ nameValue: nameValueEvent.target.value, name: true });
     public messageChange = (messageValueEvent: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => this.setState({ messageValue: messageValueEvent.target.value, message: true });
@@ -144,7 +151,7 @@ export class Contact extends Component<{}, IContactState> {
                             >
                                 Send over
                         </Button>
-                            <Alert severity="success" className={`contact_alert contact_alert_${show ? 'show' : ''}`}>Thank you for your message. We'll react out to you as fast as possible.</Alert>
+                            <Alert severity="success" className={`contact_alert contact_alert_${show ? 'show' : ''}`}>Thank you for your message. We'll reach out to you as fast as possible.</Alert>
                         </div>
                     </Grid>
                 </Grid>
