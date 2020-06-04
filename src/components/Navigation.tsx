@@ -15,7 +15,11 @@ interface INavigationState {
   othersClick: boolean;
 }
 
-export class Navigation extends Component<{}, INavigationState> {
+interface INavigationProps {
+  location: { pathname: string }
+}
+
+export class Navigation extends Component<INavigationProps, INavigationState> {
 
   public constructor(props, state: any) {
     super(props);
@@ -40,6 +44,7 @@ export class Navigation extends Component<{}, INavigationState> {
 
   public render(): React.ReactNode {
     const { selectedPage, anchorEl, othersClick } = this.state;
+    const { location } = this.props;
 
     return (
       <AppBar position="static" className="navigation">
@@ -47,7 +52,7 @@ export class Navigation extends Component<{}, INavigationState> {
           <Link to="/" onClick={this.setAthiPenPage}>
             <h6 className="navigation__link">
               <div
-                className={`navigation__link_href navLinkAnimation navLinkAnimation${selectedPage === 'AthiPen' ? '_focused' : ''}`}
+                className={`navigation__link_href navLinkAnimation navLinkAnimation${selectedPage === 'AthiPen' || (location.pathname.split('/')[1] || '/') === '/' ? '_focused' : ''}`}
               >
                 <span>AthiPen</span>
               </div>
@@ -55,7 +60,7 @@ export class Navigation extends Component<{}, INavigationState> {
           </Link>
           <Link to="/AllProducts" onClick={this.setAllProductsPage}>
             <h6 className="navigation__link">
-              <div className={`navigation__link_href navLinkAnimation navLinkAnimation${selectedPage === 'AllProducts' ? '_focused' : ''}`}>
+              <div className={`navigation__link_href navLinkAnimation navLinkAnimation${selectedPage === 'AllProducts' || (location.pathname.split('/')[1] || '/') === 'AllProducts' ? '_focused' : ''}`}>
                 <span>All Products</span>
               </div>
             </h6>
@@ -63,7 +68,7 @@ export class Navigation extends Component<{}, INavigationState> {
           <h6 className="navigation__link" aria-controls="others-menu" aria-haspopup="true">
             <div
               className={`pointer navigation__link_href navLinkAnimation navLinkAnimation${othersClick || selectedPage === 'ContactUs' || selectedPage === 'OurStory'
-                ? '_focused' : ''}`}
+              || (location.pathname.split('/')[1] || '/') === 'OurStory' || (location.pathname.split('/')[1] || '/') === 'Contact' ? '_focused' : ''}`}
               aria-controls="simple-menu"
               aria-haspopup="true"
               onClick={this.handleClick}

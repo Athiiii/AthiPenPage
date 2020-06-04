@@ -5,6 +5,7 @@ import "../style/main.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Color } from "../Enum/Color";
 import { faPen, faMoneyBill, faMedal, faBuilding, faCrop, faTag, faUsers, faFlag, faPenAlt, faTrophy, faViruses } from "@fortawesome/free-solid-svg-icons";
+import { Typography } from "@material-ui/core";
 
 export class OurStory extends Component {
     static displayName = OurStory.name;
@@ -12,6 +13,7 @@ export class OurStory extends Component {
     public render(): React.ReactNode {
         return (
             <div>
+                <Typography variant="h2">Our Story</Typography>
                 <VerticalTimeline className="timeline">
                     <VerticalTimelineElement
                         iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}

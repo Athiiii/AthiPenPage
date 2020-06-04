@@ -20,10 +20,9 @@ export class Home extends Component<IHomeProps> {
     const { location } = this.props;
     const currentKey = location.pathname.split('/')[1] || '/'
     const timeout = { enter: 300, exit: 200 }
-
     return (
       <div>
-        <Navigation />
+        <Navigation location={location} />
         <TransitionGroup component="main" className="page-main">
           <CSSTransition key={currentKey} timeout={timeout} classNames="fade" appear>
             <section className="page-main-inner">
