@@ -45,6 +45,16 @@
         flex-direction: column;
         text-align: center;
         margin-top: 1rem;
+        font-family: 'Lato'
+    }
+
+    &>h3 {
+        color: $color-orange;
+        font-family: 100;
+    }
+
+    &>h4 {
+        color: $color-dark;
     }
 
     &_text {

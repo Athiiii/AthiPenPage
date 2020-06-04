@@ -107,7 +107,7 @@ export class OurStory extends Component {
                     >
                         <h3 className="vertical-timeline-element-title">Reaching 150</h3>
                         <h4 className="vertical-timeline-element-subtitle">employees</h4>
-                        <p>The your company is slowly growing. After 1.5 years of hard work, we have grown into a small family with 150 people!</p>
+                        <p>The company is slowly growing. After 1.5 years of hard work, we have grown into a small family with 150 people!</p>
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--education"
@@ -131,7 +131,7 @@ export class OurStory extends Component {
                     >
                         <h3 className="vertical-timeline-element-title">Leading pen-seller</h3>
                         <h4 className="vertical-timeline-element-subtitle">worldwide</h4>
-                        <p>Through AthiPen 2.0 we are able to dominate the pen market and overtake SevisStift Inc., Umat-StiftProdukt Gmbh and Schaad-Stabilo AG</p>
+                        <p>Through AthiPen Pro we are able to dominate the pen market and overtake SevisStift Inc., Umat-StiftProdukt Gmbh and Schaad-Stabilo AG</p>
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--education"
@@ -143,7 +143,7 @@ export class OurStory extends Component {
                     >
                         <h3 className="vertical-timeline-element-title">The fight against</h3>
                         <h4 className="vertical-timeline-element-subtitle">Coronavirus</h4>
-                        <p>The Covid-19 pandemie also affects us. But through our quick switch to Home office and the turn off of our fabrics, we were able to protect our employees. We are armed against the virus.</p>
+                        <p>The Covid-19 pandemie also affects us. But through our quick switch to home office and the turn off of our fabrics, we were able to protect our employees. We are fully armed against the virus.</p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
             </div>

@@ -3,11 +3,24 @@ import { Button, FormControl, Grid, Input, InputAdornment, InputLabel } from "@m
 import React, { Component } from "react";
 import { Color } from "../Enum/Color";
 import "../style/main.scss";
+import { Alert } from '@material-ui/lab';
 
-export class Contact extends Component {
+export class Contact extends Component<{}, {show: boolean}> {
     static displayName = Contact.name;
 
+    public constructor(state, props) {
+        super(props);
+
+        this.state = {
+            show: false
+        }
+    }
+
+    public submit = (): void => this.setState({show: true});
+
     public render(): React.ReactNode {
+        const { show } = this.state;
+
         return (
             <div>
                 <Grid container spacing={3} className="pa-3 contact">
@@ -26,7 +39,7 @@ export class Contact extends Component {
                     </Grid>
                     <Grid item xs={6} className="contact_form">
                         <FormControl className="contact_input_form">
-                            <InputLabel htmlFor="input-with-icon-adornment">Name</InputLabel>
+                            <InputLabel htmlFor="input-with-icon-adornment">Name*</InputLabel>
                             <Input
                                 id="input-with-icon-adornment"
                                 className="contact_input"
@@ -38,7 +51,7 @@ export class Contact extends Component {
                             />
                         </FormControl>
                         <FormControl className="contact_input_form">
-                            <InputLabel htmlFor="input-with-icon-adornment">E-Mail</InputLabel>
+                            <InputLabel htmlFor="input-with-icon-adornment">E-Mail*</InputLabel>
                             <Input
                                 id="input-with-icon-adornment"
                                 className="contact_input"
@@ -62,7 +75,7 @@ export class Contact extends Component {
                             />
                         </FormControl>
                         <FormControl className="contact_input_form">
-                            <InputLabel htmlFor="input-with-icon-adornment">Message</InputLabel>
+                            <InputLabel htmlFor="input-with-icon-adornment">Message*</InputLabel>
                             <Input
                                 multiline
                                 rows={5}
@@ -81,9 +94,11 @@ export class Contact extends Component {
                                 variant="outlined"
                                 className="contact_sendButton"
                                 endIcon={<FontAwesomeIcon size="lg" icon={"paper-plane"} color={Color.Dark} className="navigation_icon mb-1" />}
+                                onClick={this.submit}
                             >
                                 Send over
                         </Button>
+                        <Alert severity="success" className={`contact_alert contact_alert_${show ? 'show' : ''}`}>Thank you for your message. We'll react out to you as fast as possible.</Alert>
                         </div>
                     </Grid>
                 </Grid>

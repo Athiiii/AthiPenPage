@@ -4,6 +4,20 @@
     margin: 0 auto !important;
     margin-top: 50px !important;
 
+    &_alert {
+        margin-top: 1rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear 0.33s, opacity 0.33s linear !important;
+
+        &_show {
+            visibility: visible;
+            opacity: 1;
+
+            transition-delay: 1s !important;
+        }
+    }
+
     &_input {
         &_form {
             & > label {
