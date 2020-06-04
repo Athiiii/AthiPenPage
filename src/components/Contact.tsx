@@ -1,25 +1,62 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, FormControl, Grid, Input, InputAdornment, InputLabel } from "@material-ui/core";
-import React, { Component } from "react";
+import React, { Component, ChangeEvent, ChangeEventHandler } from "react";
 import { Color } from "../Enum/Color";
 import "../style/main.scss";
 import { Alert } from '@material-ui/lab';
 
-export class Contact extends Component<{}, {show: boolean}> {
+interface IContactState {
+    show: boolean,
+    name: boolean,
+    email: boolean,
+    message: boolean,
+    nameValue: string | null,
+    emailValue: string | null,
+    messageValue: string | null
+}
+
+export class Contact extends Component<{}, IContactState> {
     static displayName = Contact.name;
 
-    public constructor(state, props) {
+    public constructor(props, state: any) {
         super(props);
 
         this.state = {
-            show: false
+            show: false,
+            email: true,
+            message: true,
+            name: true,
+            emailValue: "",
+            messageValue: "",
+            nameValue: ""
         }
     }
 
-    public submit = (): void => this.setState({show: true});
+    public submit = (): void => {
+        const { messageValue, nameValue, emailValue } = this.state;
+
+        var email = true;
+        var message = true;
+        var name = true;
+
+        message = messageValue !== null && messageValue !== "";
+        email = emailValue !== null && emailValue !== "";
+        name = nameValue !== null && nameValue !== "";
+
+        if (email && message && name) {
+            this.setState({ show: true })
+        } else {
+            this.setState({ email, message, name });
+        }
+
+    }
+
+    public nameChange = (nameValueEvent: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => this.setState({ nameValue: nameValueEvent.target.value, name: true });
+    public messageChange = (messageValueEvent: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => this.setState({ messageValue: messageValueEvent.target.value, message: true });
+    public emailChange = (emailValueEvent: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => this.setState({ emailValue: emailValueEvent.target.value, email: true });
 
     public render(): React.ReactNode {
-        const { show } = this.state;
+        const { show, name, message, email, nameValue, messageValue, emailValue } = this.state;
 
         return (
             <div>
@@ -38,11 +75,14 @@ export class Contact extends Component<{}, {show: boolean}> {
                         </span>
                     </Grid>
                     <Grid item xs={6} className="contact_form">
-                        <FormControl className="contact_input_form">
+                        <FormControl className={`contact_input${name ? '_form' : '_error'}`}>
                             <InputLabel htmlFor="input-with-icon-adornment">Name*</InputLabel>
                             <Input
                                 id="input-with-icon-adornment"
                                 className="contact_input"
+                                onChange={this.nameChange}
+                                value={nameValue}
+                                error={!name}
                                 startAdornment={
                                     <InputAdornment position="start">
                                         <FontAwesomeIcon size="lg" icon={"user-alt"} color={Color.Dark} className="navigation_icon mb-1" />
@@ -50,11 +90,14 @@ export class Contact extends Component<{}, {show: boolean}> {
                                 }
                             />
                         </FormControl>
-                        <FormControl className="contact_input_form">
+                        <FormControl className={`contact_input${email ? '_form' : '_error'}`}>
                             <InputLabel htmlFor="input-with-icon-adornment">E-Mail*</InputLabel>
                             <Input
                                 id="input-with-icon-adornment"
                                 className="contact_input"
+                                onChange={this.emailChange}
+                                value={emailValue}
+                                error={!email}
                                 startAdornment={
                                     <InputAdornment position="start">
                                         <FontAwesomeIcon size="lg" icon={"envelope"} color={Color.Dark} className="navigation_icon mb-1" />
@@ -62,7 +105,7 @@ export class Contact extends Component<{}, {show: boolean}> {
                                 }
                             />
                         </FormControl>
-                        <FormControl className="contact_input_form">
+                        <FormControl className={`contact_input_form`}>
                             <InputLabel htmlFor="input-with-icon-adornment">Phone</InputLabel>
                             <Input
                                 id="input-with-icon-adornment"
@@ -74,11 +117,14 @@ export class Contact extends Component<{}, {show: boolean}> {
                                 }
                             />
                         </FormControl>
-                        <FormControl className="contact_input_form">
+                        <FormControl className={`contact_input${message ? '_form' : '_error'}`}>
                             <InputLabel htmlFor="input-with-icon-adornment">Message*</InputLabel>
                             <Input
                                 multiline
                                 rows={5}
+                                error={!message}
+                                onChange={this.messageChange}
+                                value={messageValue}                              
                                 id="input-with-icon-adornment"
                                 className="contact_input"
                                 style={{ alignItems: 'baseline' }}
@@ -98,7 +144,7 @@ export class Contact extends Component<{}, {show: boolean}> {
                             >
                                 Send over
                         </Button>
-                        <Alert severity="success" className={`contact_alert contact_alert_${show ? 'show' : ''}`}>Thank you for your message. We'll react out to you as fast as possible.</Alert>
+                            <Alert severity="success" className={`contact_alert contact_alert_${show ? 'show' : ''}`}>Thank you for your message. We'll react out to you as fast as possible.</Alert>
                         </div>
                     </Grid>
                 </Grid>

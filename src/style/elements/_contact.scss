@@ -49,6 +49,33 @@
                 border-bottom: 2px solid rgba($color-orange, 0.5) !important;
             }
         }
+        
+        &_error {
+            & > label {
+                transition: color 0.2s;
+                color: #f44336;
+            }
+
+            & > div > div > svg {
+                transition: color 0.2s;
+            }
+
+            & > div::before {
+                transition: border-bottom-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-bottom-width 0.2s;
+            }
+
+            & > div::after {
+                border-bottom-color: #f44336 !important;
+            }
+
+            & > div > div > svg {
+                color: #f44336 !important;
+            }
+
+            & > div::before {
+                border-bottom: 2px solid rgba(#f44336, 0.5) !important;
+            }
+        }
     }
 
     &_sendButton {
