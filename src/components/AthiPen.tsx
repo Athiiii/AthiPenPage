@@ -30,8 +30,8 @@ export class AthiPen extends Component<{}, IAthiPenState> {
         return (
             <div className="athiPen">
                 <span className="athiPen_header">
-                    <Typography variant="h3">The AthiPen</Typography>
-                    <Typography variant="h4">The next generation of pens</Typography>
+                    <Typography variant="h2">The AthiPen</Typography>
+                    <Typography variant="h3">The next generation of pens</Typography>
                     <span className="athiPen_header_colors">
                         <div className={`athiPen_header_colors_item athiPen_header_colors_item-first ${firstColorClicked ? 'selected' : ''}`} onClick={this.firstColorClicked}>
                             <span>

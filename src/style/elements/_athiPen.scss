@@ -33,11 +33,11 @@
     }
 
     &_header {
-        & > h3 {
+        & > h2 {
             color: $color-orange;
         }
 
-        & > h4 {
+        & > h3 {
             color: $color-dark;
         }
 
@@ -56,7 +56,6 @@
                 margin-right: 10px;
                 height: 1.7rem;
                 width: 1.7rem;
-                border-radius: 100px;
                 padding: 3px;
                 transition: transform 0.3s;
                 position: relative;
@@ -88,7 +87,6 @@
                 }
 
                 & > span > div {
-                    background: white;
                     height: 100%;
                     width: 100%;
                     position: relative;
