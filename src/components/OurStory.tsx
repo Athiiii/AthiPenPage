@@ -5,7 +5,7 @@ import "../style/main.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Color } from "../Enum/Color";
 import { faPen, faMoneyBill, faMedal, faBuilding, faCrop, faTag, faUsers, faFlag, faPenAlt, faTrophy, faViruses } from "@fortawesome/free-solid-svg-icons";
-import { Typography } from "@material-ui/core";
+import { Typography, Divider } from "@material-ui/core";
 
 export class OurStory extends Component {
     static displayName = OurStory.name;
@@ -13,7 +13,24 @@ export class OurStory extends Component {
     public render(): React.ReactNode {
         return (
             <div>
-                <Typography variant="h2">Our Story</Typography>
+                <div className="ourStory">
+                    <Typography variant="h3" >Our Story</Typography>
+                    <p className="ourStory_text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem blanditiis soluta recusandae sed dolorum placeat illo modi dolor rerum natus. Perspiciatis quod ut minus iste! Obcaecati nemo accusamus cupiditate atque.
+                        Animi nisi itaque accusamus earum facilis magnam asperiores. Consectetur, iure, aliquid aut quidem eveniet maiores quia quisquam, illo maxime alias ipsum delectus consequatur possimus hic! In ducimus impedit sequi molestiae.
+                        Laborum itaque maiores quas distinctio commodi neque voluptate est in debitis, perspiciatis architecto deserunt ipsum quia ipsa! Non, laudantium. Perferendis, pariatur architecto quisquam ex aliquid dicta hic qui tempore alias!
+                        Repudiandae, labore? Illum molestias maiores qui nemo suscipit ea. Quidem fugit similique, aperiam nulla quas asperiores commodi iusto minus incidunt minima obcaecati tenetur harum beatae eligendi provident, alias soluta consectetur!
+                        Sit rem placeat eos voluptatibus iure harum voluptates optio, modi aut quasi fugit quos molestiae magnam hic aspernatur, temporibus commodi voluptatum, aliquid at doloremque eius veritatis reprehenderit consectetur eveniet. Ea?
+                        Sequi tenetur deleniti nihil, rerum aliquid delectus magni nisi veritatis aut suscipit sunt earum atque, cupiditate porro voluptates amet ex est numquam possimus! Vel expedita perspiciatis sit blanditiis veritatis? Soluta!
+                        Nam culpa cumque praesentium, dicta labore obcaecati officia cupiditate alias id beatae libero quae rem commodi eaque quis, reiciendis iusto animi corporis illum neque impedit! Eveniet necessitatibus qui perferendis similique.
+                        Ducimus natus, expedita dolores, asperiores eligendi nam exercitationem excepturi saepe tempore debitis fugiat officiis, quam eum molestiae. Maiores ipsum perspiciatis blanditiis, iusto, id odit perferendis quod illum ut ipsam saepe.
+                        Ducimus dolore tenetur debitis nemo veniam nam omnis ea accusamus amet sit. Tempore ipsum ut beatae, consequuntur commodi quos aperiam perferendis, velit, rerum quaerat ullam deleniti saepe eos laudantium iste?
+                        Aspernatur nostrum deserunt quibusdam repudiandae sapiente natus quaerat ea. Praesentium quis vel doloremque sunt. Ipsa sed illo enim obcaecati! Dolorem, inventore natus unde officiis temporibus sed modi minima quis! Reiciendis.
+                    </p>
+                    <Divider />
+                    <Typography variant="h4" >The timeline</Typography>
+
+                </div>
                 <VerticalTimeline className="timeline">
                     <VerticalTimelineElement
                         iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
