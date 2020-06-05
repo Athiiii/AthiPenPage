@@ -32,6 +32,25 @@
         }
     }
 
+    &_learnMore {
+        display: inline-block;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &_header {
+            text-align: center;
+            font-weight: bold !important;
+            color: $color-orange !important;
+            transition: letter-spacing 0.4s;
+
+            &:hover {
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
+
     &_header {
         & > h2 {
             color: $color-orange;

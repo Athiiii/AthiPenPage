@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, FormControl, Grid, Input, InputAdornment, InputLabel } from "@material-ui/core";
-import React, { Component, ChangeEvent, ChangeEventHandler } from "react";
+import { Alert } from '@material-ui/lab';
+import React, { ChangeEvent, Component } from "react";
 import { Color } from "../Enum/Color";
 import "../style/main.scss";
-import { Alert } from '@material-ui/lab';
 
 interface IContactState {
     show: boolean,

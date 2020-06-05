@@ -1,6 +1,7 @@
+import { Button, Link, Typography } from "@material-ui/core";
 import React, { Component } from "react";
 import "../style/main.scss";
-import { Typography, Button, Link } from "@material-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Color } from "../Enum/Color";
 
 interface IAthiPenState {
@@ -44,9 +45,18 @@ export class AthiPen extends Component<{}, IAthiPenState> {
                             </span>
                         </div>
                     </span>
-                    <Button variant="contained" className="athiPen_header_button">Add to cart</Button>
+                    <Button variant="contained" className="athiPen_header_button" startIcon={
+                        <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="mb-1 mr-0 ml-1" />
+                    }>Add to cart</Button>
                     <Link href="#learn_more" className="athiPen_header_learn-more">Learn more</Link>
-
+                </span>
+                <span className="athiPen_learnMore">
+                    <Typography variant="h4" className="athiPen_learnMore_header">The AthiPen</Typography>
+                    <div>
+                        <Button variant="contained" className="athiPen_header_button" startIcon={
+                            <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="mb-1 mr-0 ml-1" />
+                        }>Add to cart</Button>
+                    </div>
                 </span>
             </div>
         );

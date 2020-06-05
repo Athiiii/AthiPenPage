@@ -1,11 +1,11 @@
+import { faBuilding, faCrop, faFlag, faMedal, faPen, faPenAlt, faTag, faTrophy, faUsers, faViruses } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Divider, Typography } from "@material-ui/core";
 import React, { Component } from "react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import "../style/main.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Color } from "../Enum/Color";
-import { faPen, faMoneyBill, faMedal, faBuilding, faCrop, faTag, faUsers, faFlag, faPenAlt, faTrophy, faViruses } from "@fortawesome/free-solid-svg-icons";
-import { Typography, Divider } from "@material-ui/core";
+import "../style/main.scss";
 
 export class OurStory extends Component {
     static displayName = OurStory.name;

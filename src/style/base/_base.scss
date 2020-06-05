@@ -24,3 +24,8 @@ html {
     font-family: 'Lato' !important;
   }
 }
+
+::selection {
+  background-color: #ffa000c7;
+  color: white;
+}
