@@ -1,27 +1,32 @@
 .athiPen {
     padding: 1rem;
-    width: 60% !important;
+    width: 80% !important;
     margin: 0 auto;
     margin-top: 40px;
 
     @media only screen and (max-width: 1200px) {
         & {
-            width: 70% !important;
+            width: 85% !important;
             margin-top: 40px !important;
         }
     }
 
     @media only screen and (max-width: 1000px) {
         & {
-            width: 80% !important;
+            width: 90% !important;
             margin-top: 30px !important;
         }
     }
 
     @media only screen and (max-width: 800px) {
         & {
-            width: 90% !important;
+            width: 95% !important;
             margin-top: 20px !important;
+        }
+
+        &_header {
+            flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -52,6 +57,8 @@
     }
 
     &_header {
+        display: flex;
+
         & > h2 {
             color: $color-orange;
         }
@@ -64,6 +71,22 @@
             outline: none !important;
             background-color: $color-orange !important;
             margin-top: 1rem !important;
+        }
+
+        &_img {
+            height: 16rem;
+            width: auto;
+            transition: opacity 0.5s, transform 0.6s;
+            opacity: 1;
+
+            &_disappeared {
+                opacity: 0;
+                width: 0;
+            }
+
+            &:hover {
+                transform: translate(3rem, -1.5rem);
+            }
         }
 
         &_colors {
