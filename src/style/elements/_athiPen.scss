@@ -1,42 +1,4 @@
 .athiPen {
-    padding: 1rem;
-    width: 80% !important;
-    margin: 0 auto;
-    margin-top: 40px;
-
-    @media only screen and (max-width: 1200px) {
-        & {
-            width: 85% !important;
-            margin-top: 40px !important;
-        }
-    }
-
-    @media only screen and (max-width: 1000px) {
-        & {
-            width: 90% !important;
-            margin-top: 30px !important;
-        }
-    }
-
-    @media only screen and (max-width: 800px) {
-        & {
-            width: 95% !important;
-            margin-top: 20px !important;
-        }
-
-        &_header {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    @media only screen and (max-width: 600px) {
-        & {
-            width: 100% !important;
-            margin-top: 10px !important;
-        }
-    }
-
     &_learnMore {
         display: inline-block;
         margin-top: 2rem;
@@ -56,8 +18,57 @@
         }
     }
 
+    &_ads {
+        margin: 0 auto;
+        width: 100%;
+
+        & > img {
+            width: 98%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+
     &_header {
         display: flex;
+        padding: 1rem;
+        width: 80% !important;
+        margin: 0 auto;
+        margin-top: 40px;
+
+        @media only screen and (max-width: 1200px) {
+            & {
+                width: 85% !important;
+                margin-top: 40px !important;
+            }
+        }
+
+        @media only screen and (max-width: 1000px) {
+            & {
+                width: 90% !important;
+                margin-top: 30px !important;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            & {
+                width: 95% !important;
+                margin-top: 20px !important;
+            }
+
+            &_header {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            & {
+                width: 100% !important;
+                margin-top: 10px !important;
+            }
+        }
 
         & > h2 {
             color: $color-orange;
@@ -70,7 +81,7 @@
         &_button {
             outline: none !important;
             background-color: $color-orange !important;
-            margin-top: 1rem !important;
+            margin-top: 3rem !important;
         }
 
         &_img {
@@ -148,7 +159,7 @@
             text-decoration: none !important;
             transition: color 0.2s !important;
             display: block !important;
-            margin-top: 0.5rem !important;
+            margin-top: 1.5rem !important;
 
             &:hover {
                 text-decoration: none !important;

@@ -1,4 +1,4 @@
-import { Button, Link, Typography } from "@material-ui/core";
+import { Button, Link, Typography, Divider } from "@material-ui/core";
 import React, { Component } from "react";
 import "../style/main.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,7 +54,11 @@ export class AthiPen extends Component<{}, IAthiPenState> {
                     <img src={require("../assets/blue-pen.png")} alt="pen blue" className={`athiPen_header_img athiPen_header_img_${!firstColorClicked ? "disappeared" : ""}`} />
                     <img src={require("../assets/orange-pen.png")} alt="pen orange" className={`athiPen_header_img athiPen_header_img_${!secondColorClicked ? "disappeared" : ""}`} />
                 </span>
+                <span className="athiPen_ads">
+                    <img src={require("../assets/Ad.png")} alt="Advertisement" className="athiPen_header_ad" />
+                </span>
                 <span className="athiPen_learnMore">
+                    <Divider />
                     <Typography variant="h4" className="athiPen_learnMore_header">The AthiPen</Typography>
                     <div>
                         <Button variant="contained" className="athiPen_header_button" startIcon={
