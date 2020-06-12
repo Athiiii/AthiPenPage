@@ -4,10 +4,12 @@ import "../style/main.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Color } from "../Enum/Color";
 import { Link, animateScroll as scroll } from "react-scroll";
+import videojs from 'video.js'
 
 interface IAthiPenState {
     firstColorClicked: boolean;
     secondColorClicked: boolean;
+    player: any;
 }
 
 
@@ -19,7 +21,8 @@ export class AthiPen extends Component<{}, IAthiPenState> {
 
         this.state = {
             firstColorClicked: true,
-            secondColorClicked: false
+            secondColorClicked: false,
+            player: null
         }
     }
 
@@ -87,7 +90,22 @@ export class AthiPen extends Component<{}, IAthiPenState> {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima corrupti, facere aperiam ipsam qui consectetur explicabo sequi obcaecati? Possimus, eos pariatur. Molestiae quae quo voluptatem quas harum iure sequi!</p>
                         </div>
                         <div className="athiPen_learnMore_spec_flexItem">
-                            Video
+                            <video
+                                id="my-video"
+                                className="video-js"
+                                controls
+                                preload="auto"
+                                width="640"
+                                height="264"
+                                data-setup="{}"
+                            >
+                                <source src={require("../assets/video.webm")} type="video/webm" />
+                                <p className="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                     <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                </p>
+                            </video>
                         </div>
                     </div>
 
