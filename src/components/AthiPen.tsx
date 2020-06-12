@@ -81,6 +81,16 @@ export class AthiPen extends Component<{}, IAthiPenState> {
                             <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="mb-1 mr-0 ml-1" />
                         }>Add to cart</Button>
                     </div>
+                    <div className="athiPen_learnMore_spec">
+                        <div className="athiPen_learnMore_spec_flexItem">
+                            <Typography variant="h6" className="athiPen_learnMore_spec_title">Specifications:</Typography>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima corrupti, facere aperiam ipsam qui consectetur explicabo sequi obcaecati? Possimus, eos pariatur. Molestiae quae quo voluptatem quas harum iure sequi!</p>
+                        </div>
+                        <div className="athiPen_learnMore_spec_flexItem">
+                            Video
+                        </div>
+                    </div>
+
                 </span>
             </div>
         );
