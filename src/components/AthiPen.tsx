@@ -1,8 +1,9 @@
-import { Button, Link, Typography, Divider } from "@material-ui/core";
+import { Button, Typography, Divider } from "@material-ui/core";
 import React, { Component } from "react";
 import "../style/main.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Color } from "../Enum/Color";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 interface IAthiPenState {
     firstColorClicked: boolean;
@@ -50,19 +51,26 @@ export class AthiPen extends Component<{}, IAthiPenState> {
                             <Button variant="contained" className="athiPen_header_button" startIcon={
                                 <FontAwesomeIcon size="lg" icon={"shopping-cart"} color={Color.Dark} className="mb-1 mr-0 ml-1" />
                             }>Add to cart</Button>
-                            <Link href="#learn_more" className="athiPen_header_learn-more">Learn more</Link>
+                            <Link to="learn_more" className="athiPen_header_learn-more">Learn more</Link>
                         </div>
                         <img src={require("../assets/blue-pen.png")} alt="pen blue" className={`athiPen_header_img athiPen_header_img_${!firstColorClicked ? "disappeared" : ""}`} />
                         <img src={require("../assets/orange-pen.png")} alt="pen orange" className={`athiPen_header_img athiPen_header_img_${!secondColorClicked ? "disappeared" : ""}`} />
                     </span>
                     <div className="athiPen_header_show-more">
-                        <a href="#">
+                        <Link
+                            activeClass="link-noStyle"
+                            to="ads"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
                             <p>Show more</p>
-                            <FontAwesomeIcon size="lg" icon={"angle-double-down"} color={Color.Dark} className="mb-1 mr-0 ml-1" />
-                        </a>
+                            <FontAwesomeIcon size="2x" icon={"angle-double-down"} color={Color.Dark} className="mb-1 mr-0 ml-1" />
+                        </Link>
                     </div>
                 </span>
-                <span className="athiPen_ads">
+                <span className="athiPen_ads" id="ads">
                     <img src={require("../assets/Ad.png")} alt="Advertisement" className="athiPen_header_ad" />
                 </span>
                 <span className="athiPen_learnMore">
