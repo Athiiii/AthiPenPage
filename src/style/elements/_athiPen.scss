@@ -47,6 +47,22 @@
             display: flex;
             flex-direction: row;
 
+            @media only screen and (max-width: 1200px) {
+                & {
+                    flex-direction: column !important;
+                }
+
+                &_flexItem {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+
+                    &:nth-child(1) {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+
             &_title {
                 font-weight: bold !important;
             }
@@ -55,6 +71,10 @@
                 flex-basis: 0;
                 flex-grow: 1;
                 width: 100%;
+
+                &:nth-child(1) {
+                    margin-right: 0.8rem;
+                }
             }
         }
 

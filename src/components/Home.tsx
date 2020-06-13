@@ -8,6 +8,7 @@ import { Contact } from "./Contact";
 import { Navigation } from "./Navigation";
 import { OurStory } from "./OurStory";
 import { Redirect } from "react-router";
+import { Footer } from "./Footer";
 
 interface IHomeProps {
   location: any;
@@ -47,6 +48,7 @@ export class Home extends Component<IHomeProps> {
             </section>
           </CSSTransition>
         </TransitionGroup>
+        <Footer />
       </div>
     );
   }
