@@ -1,10 +1,9 @@
-import { Button, Typography, Divider } from "@material-ui/core";
-import React, { Component } from "react";
-import "../style/main.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Divider, Typography } from "@material-ui/core";
+import React, { Component } from "react";
+import { Link } from "react-scroll";
 import { Color } from "../Enum/Color";
-import { Link, animateScroll as scroll } from "react-scroll";
-import videojs from 'video.js'
+import "../style/main.scss";
 
 interface IAthiPenState {
     firstColorClicked: boolean;
