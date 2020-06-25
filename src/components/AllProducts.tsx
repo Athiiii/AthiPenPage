@@ -7,7 +7,7 @@ export class AllProducts extends Component {
     public render(): React.ReactNode {
         return (
             <div>
-                AllProducts
+                <p style={{height: "85vh"}}>All products</p>
             </div>
         );
     }

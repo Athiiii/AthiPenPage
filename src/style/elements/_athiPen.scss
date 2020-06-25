@@ -56,7 +56,7 @@
                 flex-direction: row;
 
                 &>b {
-                    width: 7rem;
+                    width: 8.5rem;
                     margin-left: 0.5rem;
                 }
 
@@ -76,7 +76,6 @@
 
                 &_flexItem {
                     display: flex;
-                    align-items: center;
                     flex-direction: column;
 
                     &:nth-child(1) {
@@ -146,6 +145,7 @@
             margin: 0 auto;
             padding: 1rem;
             margin-top: 40px;
+            justify-content: center;
 
             @media only screen and (max-width: 1200px) {
                 & {

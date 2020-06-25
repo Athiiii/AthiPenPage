@@ -123,6 +123,20 @@ export class AthiPen extends Component<{}, IAthiPenState> {
                                 <b>Length:</b>
                                 <p>13.8cm / 5.4 inches</p>
                             </div>
+                            <div className="athiPen_learnMore_specification">
+                                <span>
+                                    <FontAwesomeIcon size="lg" icon={"weight"} />
+                                </span>
+                                <b>Weight:</b>
+                                <p>18grams / 0.64oz</p>
+                            </div>
+                            <div className="athiPen_learnMore_specification">
+                                <span>
+                                    <FontAwesomeIcon size="lg" icon={"tree"} />
+                                </span>
+                                <b>Climate friendly:</b>
+                                <p>yes</p>
+                            </div>
                         </div>
                         <div className="athiPen_learnMore_spec_flexItem">
                             <video
