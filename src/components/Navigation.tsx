@@ -46,7 +46,7 @@ export class Navigation extends Component<INavigationProps, INavigationState> {
     const { selectedPage, anchorEl, othersClick } = this.state;
     const { location } = this.props;
 
-    var selectedPageTemp = "";
+    var selectedPageTemp = selectedPage + "_temp";
 
     return (
       <AppBar position="static" className="navigation">
