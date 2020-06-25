@@ -1,6 +1,7 @@
 import { Divider, Button } from "@material-ui/core";
 import React, { Component } from "react";
 import { Link } from "react-scroll";
+import { Link as R } from "react-router-dom";
 import "../style/main.scss";
 
 export class Footer extends Component {
@@ -18,11 +19,11 @@ export class Footer extends Component {
                         <b>Quick Links</b>
                         <Divider />
                         <span className="footer_column-list">
-                        <Link to="learn_more" className="footer_link">Get started</Link>
-                        <Link to="learn_more" className="footer_link">Top Leaders</Link>
-                        <Link to="learn_more" className="footer_link">Tickets</Link>
-                        <Link to="learn_more" className="footer_link">Lifestyle</Link>
-                        <Link to="learn_more" className="footer_link">About</Link>
+                            <Link to="learn_more" className="footer_link">Get started</Link>
+                            <Link to="learn_more" className="footer_link">Top Leaders</Link>
+                            <Link to="learn_more" className="footer_link">Tickets</Link>
+                            <Link to="learn_more" className="footer_link">Lifestyle</Link>
+                            <Link to="learn_more" className="footer_link">About</Link>
                         </span>
                     </div>
                     <div className="footer_column">
@@ -35,7 +36,9 @@ export class Footer extends Component {
                         <b>Contact us</b>
                         <Divider />
                         <p>We are always reachable for you.</p>
-                        <Button variant="outlined" className="footer_column_btn">Contact us</Button>
+                        <R to="/Contact">
+                            <Button variant="outlined" className="footer_column_btn">Contact us</Button>
+                        </R>
                     </div>
                 </footer>
                 <p className="footer_copyright">Copyright AthiPen AG &copy; 2020. All rights reserved</p>
