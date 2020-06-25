@@ -16,8 +16,7 @@ export class OurStory extends Component {
                 <div className="ourStory">
                     <Typography variant="h3" >Our Story</Typography>
                     <p className="ourStory_text">
-                        
-AthiPen is a young company that wants to introduce a new era in the pen industry. She has had many successes and hurdles in recent years. After just 2 years, it was able to grow into one of the largest market leaders. AthiPen tries to pursue the philosophy of quality over quantity. They want to stand out from the market with their unusual modern pens. The great employees of AthiPen AG put their heart and soul into the uniqueness of their products every day. Check out the timeline to see more.
+                        AthiPen is a young company that wants to introduce a new era in the pen industry. She has had many successes and hurdles in recent years. After just 2 years, it was able to grow into one of the largest market leaders. AthiPen tries to pursue the philosophy of quality over quantity. They want to stand out from the market with their unusual modern pens. The great employees of AthiPen AG put their heart and soul into the uniqueness of their products every day. Check out the timeline to see more.
                     </p>
                     <Divider />
                     <Typography variant="h4" >The timeline</Typography>

@@ -8,7 +8,7 @@ export class AllProducts extends Component {
     public render(): React.ReactNode {
         return (
             <div className="allrproducts">
-                <Typography variant="h4" style={{ marginLeft: "0.5rem" }}>Our Products</Typography>
+                <Typography variant="h4" style={{ marginLeft: "0.5rem", textAlign: "center" }}>Our Products</Typography>
                 <div className="products">
                     <span className="product">
                         <img src={require("../assets/product1-min.jpg")} alt="Product" />
