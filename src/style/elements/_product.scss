@@ -1,0 +1,56 @@
+.allrproducts {
+    margin: 1rem;
+
+    .products {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .product {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.2s;
+            border-radius: 3px;
+            border: 0.01rem solid darkgrey;
+            width: 230px;
+            display: block;
+            margin: 0.5rem;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            & > img {
+                border-radius: 3px;
+                max-width: 230px;
+                min-width: 230px;
+                max-height: 200px;
+                min-height: 200px;
+                object-fit: cover;
+            }
+
+            &_title {
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-bottom: 0.2rem;
+            }
+
+            &_description {
+                padding: 0.3rem 0.5rem;
+            }
+
+            &_price {
+                color: grey;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            &_btn {
+                width: 100%;
+                outline: none;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
