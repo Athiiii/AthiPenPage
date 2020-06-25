@@ -1,5 +1,6 @@
 .athiPen {
     max-width: 99%;
+    margin: 0 auto !important;
 
     &_learnMore {
         max-width: 95%;
@@ -49,6 +50,24 @@
             margin-top: 1rem;
             display: flex;
             flex-direction: row;
+
+            &ification {
+                display: flex;
+                flex-direction: row;
+
+                &>b {
+                    width: 7rem;
+                    margin-left: 0.5rem;
+                }
+
+                &>p {
+                    margin-bottom: 0.3rem !important;
+                }
+
+                &>span {
+                    width: 27px;
+                }
+            }
 
             @media only screen and (max-width: 1200px) {
                 & {

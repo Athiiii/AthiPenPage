@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Divider, Typography } from "@material-ui/core";
+import { faPencilAlt } from "@fortawesome/fontawesome-free-solid";
 import React, { Component } from "react";
 import { Link } from "react-scroll";
 import { Color } from "../Enum/Color";
@@ -73,6 +74,7 @@ export class AthiPen extends Component<{}, IAthiPenState> {
                     </div>
                 </span>
                 <span className="athiPen_ads" id="ads">
+                    <Divider style={{ marginBottom: "1rem" }} />
                     <img src={require("../assets/Ad.png")} alt="Advertisement" className="athiPen_header_ad" />
                 </span>
                 <span className="athiPen_learnMore">
@@ -86,7 +88,41 @@ export class AthiPen extends Component<{}, IAthiPenState> {
                     <div className="athiPen_learnMore_spec">
                         <div className="athiPen_learnMore_spec_flexItem">
                             <Typography variant="h6" className="athiPen_learnMore_spec_title">Specifications:</Typography>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima corrupti, facere aperiam ipsam qui consectetur explicabo sequi obcaecati? Possimus, eos pariatur. Molestiae quae quo voluptatem quas harum iure sequi!</p>
+                            <div className="athiPen_learnMore_specification">
+                                <span>
+                                    <FontAwesomeIcon size="lg" icon={"code-branch"} />
+                                </span>
+                                <b>Version:</b>
+                                <p>AthiPen-XF0LK-60F v2.34</p>
+                            </div>
+                            <div className="athiPen_learnMore_specification">
+                                <span>
+                                    <FontAwesomeIcon size="lg" icon={"cubes"} />
+                                </span>
+                                <b>Material:</b>
+                                <p>silver / platin</p>
+                            </div>
+                            <div className="athiPen_learnMore_specification">
+                                <span>
+                                    <FontAwesomeIcon size="lg" icon={"th"} />
+                                </span>
+                                <b>Grip Material:</b>
+                                <p>rubber</p>
+                            </div>
+                            <div className="athiPen_learnMore_specification">
+                                <span>
+                                    <FontAwesomeIcon size="lg" icon={"pencil-alt"} />
+                                </span>
+                                <b>Tip Size:</b>
+                                <p>0.7mm</p>
+                            </div>
+                            <div className="athiPen_learnMore_specification">
+                                <span>
+                                    <FontAwesomeIcon size="lg" icon={"ruler"} />
+                                </span>
+                                <b>Length:</b>
+                                <p>13.8cm / 5.4 inches</p>
+                            </div>
                         </div>
                         <div className="athiPen_learnMore_spec_flexItem">
                             <video
