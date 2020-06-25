@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Divider, Typography } from "@material-ui/core";
-import { faPencilAlt } from "@fortawesome/fontawesome-free-solid";
 import React, { Component } from "react";
 import { Link } from "react-scroll";
 import { Color } from "../Enum/Color";
@@ -152,7 +151,7 @@ export class AthiPen extends Component<{}, IAthiPenState> {
                                 <p className="vjs-no-js">
                                     To view this video please enable JavaScript, and consider upgrading to a
                                     web browser that
-                                     <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                     <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener noreferrer">supports HTML5 video</a>
                                 </p>
                             </video>
                         </div>
