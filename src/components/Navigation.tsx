@@ -46,13 +46,15 @@ export class Navigation extends Component<INavigationProps, INavigationState> {
     const { selectedPage, anchorEl, othersClick } = this.state;
     const { location } = this.props;
 
+    var selectedPageTemp = "";
+
     return (
       <AppBar position="static" className="navigation">
         <Toolbar className="ml-auto navigation__toolbar pt-1 pr-1 pl-2">
           <Link to="/" onClick={this.setAthiPenPage}>
             <h6 className="navigation__link">
               <div
-                className={`navigation__link_href navLinkAnimation navLinkAnimation${selectedPage === 'AthiPen' || (location.pathname.split('/')[1] || '/') === '/' ? '_focused' : ''}`}
+                className={`navigation__link_href navLinkAnimation navLinkAnimation${selectedPageTemp === 'AthiPen' || (location.pathname.split('/')[1] || '/') === '/' ? '_focused' : ''}`}
               >
                 <span>AthiPen</span>
               </div>
@@ -60,14 +62,14 @@ export class Navigation extends Component<INavigationProps, INavigationState> {
           </Link>
           <Link to="/AllProducts" onClick={this.setAllProductsPage}>
             <h6 className="navigation__link">
-              <div className={`navigation__link_href navLinkAnimation navLinkAnimation${selectedPage === 'AllProducts' || (location.pathname.split('/')[1] || '/') === 'AllProducts' ? '_focused' : ''}`}>
+              <div className={`navigation__link_href navLinkAnimation navLinkAnimation${selectedPageTemp === 'AllProducts' || (location.pathname.split('/')[1] || '/') === 'AllProducts' ? '_focused' : ''}`}>
                 <span>All Products</span>
               </div>
             </h6>
           </Link>
           <h6 className="navigation__link" aria-controls="others-menu" aria-haspopup="true">
             <div
-              className={`pointer navigation__link_href navLinkAnimation navLinkAnimation${othersClick || selectedPage === 'ContactUs' || selectedPage === 'OurStory'
+              className={`pointer navigation__link_href navLinkAnimation navLinkAnimation${othersClick || selectedPageTemp === 'ContactUs' || selectedPageTemp === 'OurStory'
               || (location.pathname.split('/')[1] || '/') === 'OurStory' || (location.pathname.split('/')[1] || '/') === 'Contact' ? '_focused' : ''}`}
               aria-controls="simple-menu"
               aria-haspopup="true"
@@ -83,8 +85,8 @@ export class Navigation extends Component<INavigationProps, INavigationState> {
               onClose={this.handleClose}
               className="mt-5"
             >
-              <MenuItem onClick={this.setOurStoryPage} className={`navigation__menu_item navigation__menu_item_${selectedPage === 'OurStory' ? 'selected' : ''}`} ><Link to="/OurStory">Our Story</Link></MenuItem>
-              <MenuItem onClick={this.setContactsPage} className={`navigation__menu_item navigation__menu_item_${selectedPage === 'ContactUs' ? 'selected' : ''}`}><Link to="/Contact">Contact us</Link></MenuItem>
+              <MenuItem onClick={this.setOurStoryPage} className={`navigation__menu_item navigation__menu_item_${selectedPageTemp === 'OurStory' ? 'selected' : ''}`} ><Link to="/OurStory">Our Story</Link></MenuItem>
+              <MenuItem onClick={this.setContactsPage} className={`navigation__menu_item navigation__menu_item_${selectedPageTemp === 'ContactUs' ? 'selected' : ''}`}><Link to="/Contact">Contact us</Link></MenuItem>
             </Menu>
           </h6>
           <Typography variant="h6">
