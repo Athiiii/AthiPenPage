@@ -36,7 +36,7 @@ export class Footer extends Component {
                         <b>Contact us</b>
                         <Divider />
                         <p>We are always reachable for you.</p>
-                        <R to="/Contact">
+                        <R to="/Contact" className="no-style">
                             <Button variant="outlined" className="footer_column_btn">Contact us</Button>
                         </R>
                     </div>
